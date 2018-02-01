@@ -1,2 +1,4 @@
 # apertium-fin-fra
-Apertium translator for Finnish to French. This is Free/Libre open software, licenced GNU GPL version 3.
+
+Apertium bilingual data for Finnish–French machine translation. Most of the
+data comes from en.wiktionary.org and/or my (Flammie’s) head.
