@@ -4,163 +4,10 @@
   <!-- {{{ cats -->
   <section-def-cats>
     <!-- {{{ hacks -->
-    <def-cat n="desomalieren2np">
-      <cat-item lemma="somalieren" tags="vblex.*"/>
-    </def-cat>
-    <def-cat n="deadp2np">
-      <cat-item lemma="de" tags="pr.*"/>
-    </def-cat>
-    <def-cat n="dest2np">
-      <cat-item lemma="st." tags="abbr"/>
-    </def-cat>
-    <def-cat n="soviele2np">
-      <cat-item lemma="so viele" tags="det.*"/>
-    </def-cat>
-    <def-cat n="ex2np">
-      <cat-item lemma="ex" tags="adv"/>
-    </def-cat>
-    <def-cat n="nochein2np">
-      <cat-item lemma="noch ein" tags="det.*"/>
-    </def-cat>
     <!-- }}}
          {{{ words -->
-    <def-cat n="um">
-      <cat-item lemma="um" tags="cnjsub"/>
-      <cat-item lemma="um" tags="pr.*"/>
-      <cat-item lemma="um" tags="pr.acc"/>
-    </def-cat>
-    <def-cat n="seit">
-      <cat-item lemma="seit" tags="pr.*"/>
-      <cat-item lemma="seit" tags="pr.dat"/>
-      <cat-item lemma="seit" tags="cnjsub"/> <!-- XXX: bad disam -->
-    </def-cat>
-    <def-cat n="bevor">
-      <cat-item lemma="bevor" tags="preadv"/>
-    </def-cat>
-    <def-cat n="an">
-      <cat-item lemma="an" tags="pr.*"/>
-      <cat-item lemma="an" tags="pr.dat"/>
-    </def-cat>
-    <def-cat n="ab">
-      <cat-item lemma="ab" tags="adv"/> <!-- XXX: bad disam -->
-      <cat-item lemma="ab" tags="pr.*"/>
-    </def-cat>
-    <def-cat n="bis">
-      <cat-item lemma="bis" tags="cnjsub"/> <!-- XXX: bad disam -->
-      <cat-item lemma="bis" tags="pr.*"/>
-    </def-cat>
-    <def-cat n="gegen">
-      <cat-item lemma="gegen" tags="pr.*"/>
-      <cat-item lemma="gegen" tags="pr.acc"/>
-    </def-cat>
-    <def-cat n="uhr">
-      <cat-item lemma="Uhr" tags="n.*"/>
-      <cat-item lemma="uhr" tags="n.*"/>
-    </def-cat>
-    <def-cat n="über">
-      <cat-item lemma="über" tags="pr.*"/>
-      <cat-item lemma="über" tags="adv"/> <!-- XXX: bad disam -->
-    </def-cat>
-    <def-cat n="nach">
-      <cat-item lemma="nach" tags="pr.*"/>
-      <cat-item lemma="nach" tags="adv"/> <!-- XXX: bad disam -->
-      <cat-item lemma="nach" tags="pprep.*"/> <!-- XXX: bad disam -->
-    </def-cat>
-    <def-cat n="hinweg">
-      <cat-item lemma="hinweg" tags="adv"/>
-    </def-cat>
-    <def-cat n="leben">
-      <cat-item lemma="Leben" tags="n.nt.*"/>
-      <!-- lower-case strings waiting for bug fix -->
-      <cat-item lemma="leben" tags="n.nt.*"/>
-    </def-cat>
-    <def-cat n="gekommen">
-      <cat-item lemma="kommen" tags="vblex.pp"/>
-    </def-cat>
-    <def-cat n="monat">
-      <cat-item lemma="Januar" tags="n.*"/>
-      <cat-item lemma="Februar" tags="n.*"/>
-      <cat-item lemma="März" tags="n.*"/>
-      <cat-item lemma="April" tags="n.*"/>
-      <cat-item lemma="Mai" tags="np.*"/>
-      <cat-item lemma="mai" tags="n.*"/>
-      <cat-item lemma="Juni" tags="n.*"/>
-      <cat-item lemma="Juli" tags="n.*"/>
-      <cat-item lemma="August" tags="n.*"/>
-      <cat-item lemma="September" tags="n.*"/>
-      <cat-item lemma="Oktober" tags="n.*"/>
-      <cat-item lemma="November" tags="n.*"/>
-      <cat-item lemma="Dezember" tags="n.*"/>
-      <!-- lower-case strings waiting for bug fix -->
-      <cat-item lemma="januar" tags="n.*"/>
-      <cat-item lemma="februar" tags="n.*"/>
-      <cat-item lemma="märz" tags="n.*"/>
-      <cat-item lemma="april" tags="n.*"/>
-      <cat-item lemma="mai" tags="np.*"/>
-      <cat-item lemma="juni" tags="n.*"/>
-      <cat-item lemma="juli" tags="n.*"/>
-      <cat-item lemma="august" tags="n.*"/>
-      <cat-item lemma="september" tags="n.*"/>
-      <cat-item lemma="oktober" tags="n.*"/>
-      <cat-item lemma="november" tags="n.*"/>
-      <cat-item lemma="dezember" tags="n.*"/>
-    </def-cat>
-    <def-cat n="zeitwort">
-      <cat-item lemma="Jahr" tags="n.*"/>
-      <cat-item lemma="Jahrzehnt" tags="n.*"/>
-      <!-- lower-case strings waiting for bug fix -->
-      <cat-item lemma="jahr" tags="n.*"/>
-      <cat-item lemma="jahrzehnt" tags="n.*"/>
-    </def-cat>
-    <def-cat n="informationwort">
-      <cat-item lemma="Angabe" tags="n.*"/>
-      <cat-item lemma="Ansicht" tags="n.*"/>
-      <!-- lower-case strings waiting for bug fix -->
-      <cat-item lemma="angabe" tags="n.*"/>
-      <cat-item lemma="ansicht" tags="n.*"/>
-    </def-cat>
-    <def-cat n="weder_cc">
-      <cat-item lemma="weder" tags="cnjcoo"/>
-    </def-cat>
-    <def-cat n="noch_cc">
-      <cat-item lemma="noch" tags="cnjcoo"/>
-      <cat-item lemma="noch" tags="adv"/> <!-- XXX: bad disam -->
-    </def-cat>
-    <def-cat n="werden">
-      <cat-item lemma="werden" tags="vaux.*"/>
-      <cat-item lemma="werden" tags="vblex.*"/> <!-- XXX: also not aux? -->
-    </def-cat>
-    <def-cat n="als">
-      <cat-item lemma="als" tags="adv"/>
-      <cat-item lemma="als" tags="cnjadv"/> <!-- XXX: also not cnjadv? -->
-    </def-cat>
-    <def-cat n="wie">
-      <cat-item lemma="wie" tags="adv"/>
-      <cat-item lemma="wie" tags="adv.itg"/>
-    </def-cat>
-    <def-cat n="gehen">
-      <cat-item lemma="gehen" tags="vblex.pri.p2.pl"/>
-      <cat-item lemma="gehen" tags="vblex.pri.p3.sg"/>
-      <cat-item lemma="gehen" tags="vblex.prs.p3.sg"/>
-    </def-cat>
-    <def-cat n="es">
-      <cat-item lemma="es" tags="prn.pers.p3.nt.sg.*"/>
-      <cat-item lemma="prpers" tags="prn.*.p3.nt.sg.*"/>
-    </def-cat>
     <!-- }}}
          {{{ poses, groups etc. -->
-    <def-cat n="daynumber">
-      <cat-item tags="num.ord"/>
-    </def-cat>
-    <def-cat n="noun">
-      <cat-item tags="n.*"/>
-      <cat-item tags="np.*"/>
-    </def-cat>
-    <def-cat n="cmp">
-      <cat-item tags="n.*.cmp"/>
-      <cat-item tags="n.*.cmp.*"/>
-      <cat-item tags="atp.cmp"/>
-    </def-cat>
     <def-cat n="prn">
       <cat-item tags="prn.*"/>
     </def-cat>
@@ -173,14 +20,12 @@
     <def-cat n="np">
       <cat-item tags="np.*"/>
     </def-cat>
+    <def-cat n="noun">
+      <cat-item tags="n.*"/>
+    </def-cat>
     <def-cat n="nominal">
       <cat-item tags="n.*"/>
       <cat-item tags="np.*"/>
-      <cat-item tags="prn.pers.*"/> <!-- XXX: all prn will catch ART/PRN problrms -->
-    </def-cat>
-    <def-cat n="verbnegation">
-      <cat-item lemma="nicht" tags="adv"/>
-      <cat-item lemma="kein" tags="adv"/>
     </def-cat>
     <def-cat n="infinite">
       <cat-item tags="vblex.inf"/>
@@ -216,10 +61,6 @@
     <def-cat n="poss">
       <cat-item tags="det.pos.*"/>
     </def-cat>
-    <def-cat n="art">
-      <cat-item lemma="der" tags="det.*"/>
-      <cat-item lemma="ein" tags="det.*"/>
-    </def-cat>
     <def-cat n="det">
       <cat-item tags="det.*"/>
     </def-cat>
@@ -243,8 +84,6 @@
       <cat-item tags="num.card.*"/>
       <cat-item tags="num.pl.*"/>
       <cat-item tags="num"/>
-      <cat-item lemma="Milliarde" tags="n.*"/>
-      <cat-item lemma="Hundert" tags="n.*"/>
     </def-cat>
     <def-cat n="verb">
       <cat-item tags="vblex.*"/>
@@ -439,84 +278,11 @@
 
     <!-- }}}
          {{{ single word units last resorts -->
-    <rule comment="noun compounds: recompound">
-      <pattern>
-        <pattern-item n="cmp"/>
-        <pattern-item n="cmp"/>
-        <pattern-item n="noun"/>
-      </pattern>
-      <action>
-        <call-macro n="case-mangler">
-          <with-param pos="3"/>
-        </call-macro>
-        <out>
-          <chunk name="N" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="N.CMP"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_nominal"/>
-              <clip pos="1" side="tl" part="a_number"/>
-              <lit-tag v="gen"/>
-            </lu>
-              <!-- no blank -->
-            <lu>
-              <clip pos="2" side="tl" part="lem"/>
-              <clip pos="2" side="tl" part="a_nominal"/>
-              <clip pos="2" side="tl" part="a_number"/>
-              <lit-tag v="gen"/>
-            </lu>
-              <!-- no blank -->
-            <lu>
-              <clip pos="3" side="tl" part="lem"/>
-              <clip pos="3" side="tl" part="a_noun"/>
-              <clip pos="3" side="tl" part="a_number"/>
-              <var n="case"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-    <rule comment="noun compounds: recompound">
-      <pattern>
-        <pattern-item n="cmp"/>
-        <pattern-item n="noun"/>
-      </pattern>
-      <action>
-        <call-macro n="case-mangler">
-          <with-param pos="2"/>
-        </call-macro>
-        <out>
-          <chunk name="N" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="N.CMP"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_nominal"/>
-              <clip pos="1" side="tl" part="a_number"/>
-              <lit-tag v="gen"/>
-            </lu>
-              <!-- no blank -->
-            <lu>
-              <clip pos="2" side="tl" part="lem"/>
-              <clip pos="2" side="tl" part="a_noun"/>
-              <clip pos="2" side="tl" part="a_number"/>
-              <var n="case"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
     <rule comment="nouns: case mangle">
       <pattern>
         <pattern-item n="noun"/>
       </pattern>
       <action>
-        <call-macro n="case-mangler">
-          <with-param pos="1"/>
-        </call-macro>
         <out>
           <chunk name="NP" case="caseFirstWord">
             <tags>
@@ -537,15 +303,6 @@
         <pattern-item n="adj"/>
       </pattern>
       <action>
-        <call-macro n="case-mangler">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="number-mangler">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="comparison-mangler">
-          <with-param pos="1"/>
-        </call-macro>
         <out>
           <chunk name="AP" case="caseFirstWord">
             <tags>
@@ -568,12 +325,6 @@
         <pattern-item n="prn"/>
       </pattern>
       <action>
-        <call-macro n="case-mangler">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="number-mangler">
-          <with-param pos="1"/>
-        </call-macro>
         <out>
           <chunk name="PrnP" case="caseFirstWord">
             <tags>
@@ -594,9 +345,6 @@
         <pattern-item n="num"/>
       </pattern>
       <action>
-        <call-macro n="numtype-mangler">
-          <with-param pos="1"/>
-        </call-macro>
         <out>
           <chunk name="NumP" case="caseFirstWord">
             <tags>
@@ -631,80 +379,11 @@
         </out>
       </action>
     </rule>
-    <rule comment="stray negs: just say no">
-      <pattern>
-        <pattern-item n="verbnegation"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk name="VP" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="V"/></tag>
-              <tag><lit-tag v="NEG"/></tag>
-            </tags>
-            <lu>
-              <lit v="ei"/>
-              <lit-tag v="vblex.neg.actv.p3.sg"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-    <rule comment="stray possessives: ugly genitives">
-      <pattern>
-        <pattern-item n="poss"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk name="PossP" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="Poss"/></tag>
-          </tags>
-            <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_prn"/>
-              <clip pos="1" side="tl" part="a_number"/>
-              <lit-tag v="gen"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-    <rule comment="stranded articles: don't want">
-      <pattern>
-        <pattern-item n="art"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk name="ArtP" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="ART"/></tag>
-            </tags>
-            <!--
-            <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_nominal"/>
-              <clip pos="1" side="tl" part="a_number"/>
-              <clip pos="1" side="tl" part="a_case"/>
-            </lu>
-            <b pos="1"/>
-            -->
-          <b/>
-          </chunk>
-        </out>
-      </action>
-    </rule>
     <rule comment="stranded dets: just show them">
       <pattern>
         <pattern-item n="det"/>
       </pattern>
       <action>
-        <call-macro n="case-mangler">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="number-mangler">
-          <with-param pos="1"/>
-        </call-macro>
         <out>
           <chunk name="DetP" case="caseFirstWord">
             <tags>
@@ -726,9 +405,6 @@
         <pattern-item n="perfection"/>
       </pattern>
       <action>
-        <call-macro n="tensemood-mangler">
-          <with-param pos="1"/>
-        </call-macro>
         <out>
           <chunk name="VP" case="caseFirstWord">
             <tags>
@@ -752,9 +428,6 @@
         <pattern-item n="infinite"/>
       </pattern>
       <action>
-        <call-macro n="infinite-mangler">
-          <with-param pos="1"/>
-        </call-macro>
         <out>
           <chunk name="VP" case="caseFirstWord">
             <tags>
@@ -778,12 +451,6 @@
         <pattern-item n="verb"/>
       </pattern>
       <action>
-        <call-macro n="tensemood-mangler">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="pers-mangler">
-          <with-param pos="1"/>
-        </call-macro>
         <out>
           <chunk name="VP" case="caseFirstWord">
             <tags>
