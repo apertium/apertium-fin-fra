@@ -4,7 +4,7 @@
 
 VERSION=0.0.0
 LANG1=fin
-LANG2=deu
+LANG2=fra
 PREFIX1=$(LANG1)-$(LANG2)
 PREFIX2=$(LANG2)-$(LANG1)
 
@@ -21,7 +21,6 @@ TARGETS_COMMON = \
 	$(PREFIX1).t3x.bin \
 	$(PREFIX2).automorf.bin $(PREFIX2).automorf-untrimmed.bin \
 	$(PREFIX2).rlx.bin \
-	$(PREFIX2).prep.cg3.bin \
 	$(PREFIX2).autobil.bin \
 		$(PREFIX2).autolex.bin \
 	$(PREFIX2).autogen.hfst \
@@ -93,8 +92,6 @@ $(PREFIX1).rlx.bin: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).rlx
 $(PREFIX2).rlx.bin: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).rlx
 	cg-comp $< $@
 
-$(PREFIX2).prep.cg3.bin: apertium-$(LANG1)-$(LANG2).$(LANG2)-$(LANG1).prep.cg3
-	cg-comp $< $@
 
 ###############################################################################
 ## Bilingual dictionaries
@@ -184,10 +181,10 @@ EXTRA_DIST= \
 ## Installation
 ###############################################################################
 
-apertium_fin_deudir=$(prefix)/share/apertium/$(BASENAME)/
+apertium_fin_fradir=$(prefix)/share/apertium/$(BASENAME)/
 
 # Files which should be installed to $(prefix)/share/apertium/$(BASENAME)/:
-apertium_fin_deu_DATA= \
+apertium_fin_fra_DATA= \
 	$(TARGETS_COMMON) \
 	$(BASENAME).$(PREFIX1).t1x \
 	$(BASENAME).$(PREFIX1).t2x \
@@ -214,21 +211,21 @@ clean-local:
 ###############################################################################
 
 test: all
-	echo "talo" | apertium -d . fin-deu | tee .test-mt
+	echo "talo" | apertium -d . fin-fra | tee .test-mt
 	@echo "Haus#" > .test-ref
 	@diff .test-ref .test-mt
-	echo "Haus" | apertium -d . deu-fin | tee .test-mt
+	echo "Haus" | apertium -d . fra-fin | tee .test-mt
 	@echo "talo" > .test-ref
 	@diff .test-ref .test-mt
 	@rm .test-ref .test-mt
 
 # Slow but near-complete test of dictionary consistency:
-test-gen-fin-deu: all
-	! dev/testvoc/generation.sh --hfst fin-deu
+test-gen-fin-fra: all
+	! dev/testvoc/generation.sh --hfst fin-fra
 
-test-gen-deu-fin: all
-	! dev/testvoc/generation.sh deu-fin
+test-gen-fra-fin: all
+	! dev/testvoc/generation.sh fra-fin
 
-test-voc: test-gen-fin-deu \
-	      test-gen-deu-fin
+test-voc: test-gen-fin-fra \
+	      test-gen-fra-fin
 
