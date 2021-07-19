@@ -120,7 +120,7 @@ $(PREFIX2).autolex.bin: $(BASENAME).$(PREFIX2).lrx
 ###
 
 $(PREFIX2).autosep.bin: $(BASENAME).$(PREFIX2).lsx
-	$(LSXCOMP) $< $@
+	$(LSXCOMP) lr $< $@
 
 ###############################################################################
 ## Structural transfer rules
@@ -211,13 +211,7 @@ clean-local:
 ###############################################################################
 
 test: all
-	echo "talo" | apertium -d . fin-fra | tee .test-mt
-	@echo "Haus#" > .test-ref
-	@diff .test-ref .test-mt
-	echo "Haus" | apertium -d . fra-fin | tee .test-mt
-	@echo "talo" > .test-ref
-	@diff .test-ref .test-mt
-	@rm .test-ref .test-mt
+	apertium-regtest test
 
 # Slow but near-complete test of dictionary consistency:
 test-gen-fin-fra: all
