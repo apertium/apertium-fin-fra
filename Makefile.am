@@ -1,8 +1,7 @@
 ###############################################################################
-## Makefile for Finnish--German
+## Makefile for Finnish--French
 ###############################################################################
 
-VERSION=0.0.0
 LANG1=fin
 LANG2=fra
 PREFIX1=$(LANG1)-$(LANG2)
@@ -10,40 +9,38 @@ PREFIX2=$(LANG2)-$(LANG1)
 
 BASENAME=apertium-$(PREFIX1)
 
-TARGETS_COMMON = \
-	$(PREFIX1).automorf.hfst \
-	$(PREFIX1).rlx.bin \
-	$(PREFIX1).autobil.bin \
-		$(PREFIX1).autolex.bin \
-	$(PREFIX1).autogen.bin \
-	$(PREFIX1).t1x.bin \
-	$(PREFIX1).t2x.bin \
-	$(PREFIX1).t3x.bin \
-	$(PREFIX2).automorf.bin $(PREFIX2).automorf-untrimmed.bin \
-	$(PREFIX2).rlx.bin \
-	$(PREFIX2).autobil.bin \
-		$(PREFIX2).autolex.bin \
-	$(PREFIX2).autogen.hfst \
-    $(PREFIX2).t1x.bin \
-	$(PREFIX2).t2x.bin \
-	$(PREFIX2).t3x.bin
-if CAN_LSX
-TARGETS_COMMON+=$(PREFIX2).autosep.bin
-endif
+TARGETS_COMMON =		\
+	$(PREFIX1).automorf.hfst	\
+	$(PREFIX1).rlx.bin	\
+	$(PREFIX1).autobil.bin	\
+	$(PREFIX1).autolex.bin	\
+	$(PREFIX1).autogen.bin	\
+	$(PREFIX1).autopgen.bin	\
+	$(PREFIX1).rtx.bin	\
+	$(PREFIX2).automorf.bin $(PREFIX2).automorf-untrimmed.bin	\
+	$(PREFIX2).rlx.bin	\
+	$(PREFIX2).autobil.bin	\
+	$(PREFIX2).autolex.bin	\
+	$(PREFIX2).autogen.hfst	\
+	$(PREFIX2).rtx.bin
 
-
-# This include defines goals for install-modes, .deps/.d and .mode files:
+# This include defines goals for install-modes, .deps/.d, autobil.prefixes and .mode files:
 @ap_include@
 
 ###############################################################################
 ## Monolingual transducers
 ###############################################################################
 
+
+
 # -------------------
 # Finnish analysis:
 # -------------------
 
-$(PREFIX1).automorf.hfst: $(AP_SRC1)/$(LANG1).automorf.hfst
+.deps/$(LANG1).automorf.hfst: $(AP_SRC1)/$(LANG1).automorf.hfst .deps/.d
+	cp -v $< $@
+
+$(PREFIX1).automorf.hfst: .deps/$(LANG1).automorf.hfst
 	cp -v $< $@
 
 # -------------------
@@ -51,22 +48,27 @@ $(PREFIX1).automorf.hfst: $(AP_SRC1)/$(LANG1).automorf.hfst
 # ---------------------
 
 
+
 $(PREFIX2).autogen.hfst: $(AP_SRC1)/$(LANG1).autogen.hfst
 	cp -v $< $@
 
 # -------------------
-# German analysis:
+# French analysis:
 # -------------------
 
-$(PREFIX2).automorf.bin: $(AP_SRC2)/$(LANG2).automorf.bin $(PREFIX2).autobil.bin
-	lt-trim $^ $@
+.deps/$(LANG2).automorf.bin: $(AP_SRC2)/$(LANG2).automorf.bin .deps/.d
+	cp $< $@
 
-$(PREFIX2).automorf-untrimmed.bin: $(AP_SRC2)/$(LANG2).automorf.bin
+$(PREFIX2).automorf-untrimmed.bin: .deps/$(LANG2).automorf.bin
 	cp -v $< $@
 
+$(PREFIX2).automorf.bin: .deps/$(LANG2).automorf.bin $(PREFIX2).autobil.bin
+	lt-trim $^ $@
+
 # -------------------
-# German generation:
+# French generation:
 # ---------------------
+
 
 
 $(PREFIX1).autogen.bin: $(AP_SRC2)/$(LANG2).autogen.bin
@@ -86,12 +88,13 @@ $(PREFIX2).prob: $(AP_SRC2)/$(LANG2).prob
 ## Disambiguation rules
 ###############################################################################
 
+
 $(PREFIX1).rlx.bin: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).rlx
 	cg-comp $< $@
 
+
 $(PREFIX2).rlx.bin: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).rlx
 	cg-comp $< $@
-
 
 ###############################################################################
 ## Bilingual dictionaries
@@ -115,41 +118,17 @@ $(PREFIX1).autolex.bin: $(BASENAME).$(PREFIX1).lrx
 $(PREFIX2).autolex.bin: $(BASENAME).$(PREFIX2).lrx
 	lrx-comp $< $@
 
-###
-## Separable!
-###
-
-$(PREFIX2).autosep.bin: $(BASENAME).$(PREFIX2).lsx
-	$(LSXCOMP) lr $< $@
 
 ###############################################################################
 ## Structural transfer rules
 ###############################################################################
 
-$(PREFIX1).t1x.bin: $(BASENAME).$(PREFIX1).t1x
-	apertium-validate-transfer $<
-	apertium-preprocess-transfer $< $@
 
-$(PREFIX1).t2x.bin: $(BASENAME).$(PREFIX1).t2x
-	apertium-validate-interchunk $<
-	apertium-preprocess-transfer $< $@
+$(PREFIX1).rtx.bin: $(BASENAME).$(PREFIX1).rtx
+	rtx-comp $< $@
 
-$(PREFIX1).t3x.bin: $(BASENAME).$(PREFIX1).t3x
-	apertium-validate-postchunk $<
-	apertium-preprocess-transfer $< $@
-
-
-$(PREFIX2).t1x.bin: $(BASENAME).$(PREFIX2).t1x
-	apertium-validate-transfer $<
-	apertium-preprocess-transfer $< $@
-
-$(PREFIX2).t2x.bin: $(BASENAME).$(PREFIX2).t2x
-	apertium-validate-interchunk $<
-	apertium-preprocess-transfer $< $@
-
-$(PREFIX2).t3x.bin: $(BASENAME).$(PREFIX2).t3x
-	apertium-validate-postchunk $<
-	apertium-preprocess-transfer $< $@
+$(PREFIX2).rtx.bin: $(BASENAME).$(PREFIX2).rtx
+	rtx-comp $< $@
 
 ###############################################################################
 ## Postgeneration dictionaries
@@ -165,16 +144,12 @@ $(PREFIX2).autopgen.bin: $(AP_SRC1)/$(LANG1).autopgen.bin
 ## Distribution
 ###############################################################################
 
-EXTRA_DIST= \
-		$(BASENAME).$(PREFIX1).lrx \
-		$(BASENAME).$(PREFIX1).dix \
-		$(BASENAME).$(PREFIX2).lrx \
-		$(BASENAME).$(PREFIX1).t1x \
-		$(BASENAME).$(PREFIX1).t2x \
-		$(BASENAME).$(PREFIX1).t3x \
-		$(BASENAME).$(PREFIX2).t1x \
-		$(BASENAME).$(PREFIX2).t2x \
-		$(BASENAME).$(PREFIX2).t3x \
+EXTRA_DIST=					\
+		$(BASENAME).$(PREFIX1).lrx	\
+		$(BASENAME).$(PREFIX1).dix	\
+		$(BASENAME).$(PREFIX2).lrx	\
+		$(BASENAME).$(PREFIX1).rtx	\
+		$(BASENAME).$(PREFIX2).rtx	\
 		modes.xml
 
 ###############################################################################
@@ -184,19 +159,17 @@ EXTRA_DIST= \
 apertium_fin_fradir=$(prefix)/share/apertium/$(BASENAME)/
 
 # Files which should be installed to $(prefix)/share/apertium/$(BASENAME)/:
-apertium_fin_fra_DATA= \
-	$(TARGETS_COMMON) \
-	$(BASENAME).$(PREFIX1).t1x \
-	$(BASENAME).$(PREFIX1).t2x \
-	$(BASENAME).$(PREFIX1).t3x \
-	$(BASENAME).$(PREFIX2).t1x \
-	$(BASENAME).$(PREFIX2).t2x \
-	$(BASENAME).$(PREFIX2).t3x
+apertium_fin_fra_DATA=	\
+	$(TARGETS_COMMON)
+
 
 # All modes are created by the same goal, listing several will just give problems with make -j2
-noinst_DATA=modes/$(PREFIX1).mode
+noinst_DATA=modes/$(PREFIX1).mode \
+	.deps/$(LANG1).automorf.hfst \
+	.deps/$(LANG2).automorf.bin
 
 install-data-local: install-modes
+uninstall-local: uninstall-modes
 
 ###############################################################################
 ## Cleanup
@@ -210,8 +183,11 @@ clean-local:
 ## Test
 ###############################################################################
 
+check-local: test test-gen-fin-fra test-gen-fra-fin
+
 test: all
 	apertium-regtest test
+
 
 # Slow but near-complete test of dictionary consistency:
 test-gen-fin-fra: all
@@ -221,5 +197,5 @@ test-gen-fra-fin: all
 	! dev/testvoc/generation.sh fra-fin
 
 test-voc: test-gen-fin-fra \
-	      test-gen-fra-fin
+		  test-gen-fra-fin
 
