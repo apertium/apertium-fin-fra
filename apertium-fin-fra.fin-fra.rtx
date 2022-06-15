@@ -6,6 +6,8 @@ number = (ND sg) sg pl sp ND;
 gender = (GD m) m f mf GD;
 det_type = def ind dem itg;
 tense = pres past fut ifi pri fti;
+person = p1 p2 p3 ;
+voice = actv pasv ;
 
 !!!!!!!!!!!!!!!
 !! OUTPUT PATTERNS
@@ -15,14 +17,25 @@ n: _.gender.number;
 adj: _.gender.number;
 det_default: _.det_type;
 det_def: _.det_type.number;
+vblex: _.tense.person.number;
+vbser: _.tense.person.number;
+vaux: _.tense.person.number;
+post: _;
+pr: _ ;
 
+PP: _;
 NP: _.number;
+VP: _;
+
+A: _.gender.number;
+N: _.gender.number;
+V: _.tense.person.number;
 
 !!!!!!!!!!!!!!!
 !! TAG-REWRITE RULES
 !!!!!!!!!!!!!!!
 
-tense > tense : ifi past, pri pres, fti fut;
+tense > tense : past pii;
 
 !!!!!!!!!!!!!!!
 !! MACROS
@@ -37,7 +50,18 @@ det: (if (1.det_type = def or 1.det_type = ind)
 !! REDUCTION RULES
 !!!!!!!!!!!!!!!
 
-NP -> n.$number adj { 2[gender=1.gender, number=1.number] _ 1 } ;
+VP -> ei@vaux V { ne@adv _ 
+                  %2[tense=1.tense,person=1.person,number=1.number] _
+                  pas@adv } ;
+PP -> %NP post { 2 _ 1 } ;
+NP -> A N { 2[gender=1.gender, number=1.number] _ 1 } |
+      %N { 1 }  ;
+
+A -> %adj { %1 } ;
+N -> %n { %1 } ;
+V -> %vblex { %1 } |
+     %vbser { %1 } |
+     %vaux { %1 } ;
 
 ! Resources:
 ! https://wiki.apertium.org/wiki/Apertium-recursive

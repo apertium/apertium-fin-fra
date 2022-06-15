@@ -144,14 +144,227 @@
 
   <section id="main" type="standard">
 
-     <!-- {{{   N O   U  N S      O            UN   S     NO UN  S
-     
-     <e><p><l>talo<s n="n"/></l><r>maison<s n="n"/><s n="f"/></r></p></e> -->
+    <!--
+    {{{ problems -->
+
+     <e r="LR"><p><l>ei<s n="vaux"/></l><r>non<s n="adv"/></r></p></e>
+     <e r="LR"><p><l>ko<s n="qst"/></l><r/></p></e>
+
+     <!-- }}}
+     {{{ dets -->
+
+     <e><p><l>se<s n="det"/></l><r>le<s n="det"/></r></p></e>
+     <e><p><l>yksi<s n="det"/></l><r>un<s n="det"/></r></p></e>
+
+     <!-- }}}
+     {{{ pronouns -->
 
 
-<!-- 
+    <!-- personal -->
+
+     <e><p><l>minä<s n="prn"/></l><r>je<s n="prn"/></r></p></e>
+     <e><p><l>sinä<s n="prn"/></l><r>tu<s n="prn"/></r></p></e>
+     <e><p><l>hän<s n="prn"/></l><r>il<s n="prn"/></r></p></e>
+     <e><p><l>hän<s n="prn"/></l><r>elle<s n="prn"/></r></p></e>
+     <e><p><l>me<s n="prn"/></l><r>nous<s n="prn"/></r></p></e>
+     <e><p><l>te<s n="prn"/></l><r>vous<s n="prn"/></r></p></e>
+     <e><p><l>he<s n="prn"/></l><r>ils<s n="prn"/></r></p></e>
+     <e><p><l>he<s n="prn"/></l><r>elles<s n="prn"/></r></p></e>
+     <e><p><l>se<s n="prn"/></l><r>ce<s n="prn"/></r></p></e>
+
+     <!-- others -->
+
+     <e><p><l>mikä<s n="prn"/></l><r>que<s n="prn"/></r></p></e>
+     <e><p><l>mikään<s n="prn"/></l><r>aucun<s n="prn"/></r></p></e>
+     <e><p><l>nämä<s n="prn"/></l><r>ces<s n="prn"/></r></p></e>
+     <e><p><l>molemmat<s n="prn"/></l><r>tous<b/>les<b/>deux<s n="prn"/></r></p></e>
+     <e><p><l>jokin<s n="prn"/></l><r>quelque-chose<s n="prn"/></r></p></e>
+
+
+     <!-- }}}
+     {{{   N O   U  N S      O            UN   S     NO UN  S -->
+
+     <e><p><l>koiras<s n="n"/></l><r>masculin<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>viisi<s n="n"/></l><r>quintet<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>kuusi<s n="n"/></l><r>sapin<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>talo<s n="n"/></l><r>maison<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>puutarha<s n="n"/></l><r>jardin<s n="n"/><s n="m"/></r></p></e>
+     <e><p><l>sää<s n="n"/></l><r>temps<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>laskeminen<s n="n"/></l><r>compter<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>leikkiminen<s n="n"/></l><r>jeux<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>leikkivä<s n="n"/></l><r>jeux<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>poika<s n="n"/></l><r>fil<s n="n"/><s n="m"/></r></p></e>
+     <e><p><l>vuosi<s n="n"/></l><r>an<s n="n"/><s n="m"/></r></p></e>
+     <e><p><l>tyttö<s n="n"/></l><r>fille<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>sisko<s n="n"/></l><r>sœur<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>koira<s n="n"/></l><r>chien<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>lapsi<s n="n"/></l><r>enfant<s n="n"/><s n="mf"/></r></p></e>
+     <e><p><l>äiti<s n="n"/></l><r>mére<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>kissa<s n="n"/></l><r>chat<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>talossa<s n="n"/></l><r>talossa<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>ikkuna<s n="n"/></l><r>fênetre<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>puu<s n="n"/></l><r>arbre<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>piilo<s n="n"/></l><r>cache<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>käsi<s n="n"/></l><r>main<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>leikki<s n="n"/></l><r>jeu<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>vastaus<s n="n"/></l><r>réponse<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>kysymys<s n="n"/></l><r>question<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>silmä<s n="n"/></l><r>yeu<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>ihminen<s n="n"/></l><r>person<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>pöytä<s n="n"/></l><r>table<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>tuoli<s n="n"/></l><r>chais<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>lintu<s n="n"/></l><r>oiseau<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>eläin<s n="n"/></l><r>animal<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>ääni<s n="n"/></l><r>bruit<s n="n"/><s n="m"/></r></p></e>
+     <e><p><l>pää<s n="n"/></l><r>tête<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>vesi<s n="n"/></l><r>eau<s n="n"/><s n="f"/></r></p></e>
+
+     <e><p><l>leikki-<s n="n"/></l><r>jeu<s n="n"/><s n="f"/></r></p></e>
+     <e><p><l>ei-<s n="n"/></l><r>non<s n="adv"/></r></p></e>
+
+     <!-- }}}
+     {{{ proper nouns PROPER NOUNS -->
+
+     <e><i>Jaakko<s n="np"/></i></e>
+     <e><i>Mari<s n="np"/></i></e>
+     <e><i>On<s n="np"/></i></e>
+     <e><i>Ku<s n="np"/></i></e>
+
+     <!-- }}}
+     {{{ adjectives -->
+
+     <e><p><l>hyvä<s n="adj"/></l><r>bon<s n="adj"/></r></p></e>
+     <e><p><l>lämmin<s n="adj"/></l><r>chaud<s n="adj"/></r></p></e>
+     <e><p><l>iso<s n="adj"/></l><r>grand<s n="adj"/></r></p></e>
+     <e><p><l>pitävä<s n="adj"/></l><r>serré<s n="adj"/></r></p></e>
+     <e><p><l>pieni<s n="adj"/></l><r>petit<s n="adj"/></r></p></e>
+     <e><p><l>hauska<s n="adj"/></l><r>amusement<s n="adj"/></r></p></e>
+     <e><p><l>vanha<s n="adj"/></l><r>vieux<s n="adj"/></r></p></e>
+     <e><p><l>iloinen<s n="adj"/></l><r>joyeux<s n="adj"/></r></p></e>
+     <e><p><l>muu<s n="adj"/></l><r>autre<s n="adj"/></r></p></e>
+     <e><p><l>menevä<s n="adj"/></l><r>aller<s n="adj"/></r></p></e>
+
+     <!-- }}}
+     {{{ adverbs -->
+
+     <e><p><l>niinpä<s n="adv"/></l><r>donc<s n="adv"/></r></p></e>
+     <e><p><l>menossa<s n="adv"/></l><r>en<b/>route<s n="adv"/></r></p></e>
+     <e><p><l>kahden<s n="adv"/></l><r>ensemble<s n="adv"/></r></p></e>
+     <e><p><l>tänään<s n="adv"/></l><r>aujourd'hui<s n="adv"/></r></p></e>
+     <e><p><l>vähän<s n="adv"/></l><r>peu<s n="adv"/></r></p></e>
+     <e><p><l>nyt<s n="adv"/></l><r>maintenant<s n="adv"/></r></p></e>
+     <e><p><l>hyvin<s n="adv"/></l><r>bien<s n="adv"/></r></p></e>
+     <e><p><l>erittäin<s n="adv"/></l><r>très<s n="preadv"/></r></p></e>
+     <e><p><l>kovasti<s n="adv"/></l><r>beaucoup<s n="adv"/></r></p></e>
+     <e><p><l>aina<s n="adv"/></l><r>toujours<s n="adv"/></r></p></e>
+     <e><p><l>myös<s n="adv"/></l><r>aussi<s n="adv"/></r></p></e>
+     <e><p><l>luokse<s n="adv"/></l><r>avec<s n="adv"/></r></p></e>
+     <e><p><l>niin<s n="adv"/></l><r>cela<s n="adv"/></r></p></e>
+     <e><p><l>miksi<s n="adv"/></l><r>pourquoi<s n="adv"/></r></p></e>
+     <e><p><l>entä<s n="adv"/></l><r>et<s n="adv"/></r></p></e>
+     <e><p><l>lähellä<s n="adv"/></l><r>prés<s n="adv"/></r></p></e>
+     <e><p><l>koskaan<s n="adv"/></l><r>jamais<s n="adv"/></r></p></e>
+     <e><p><l>takaa<s n="adv"/></l><r>derniere<s n="adv"/></r></p></e>
+     <e><p><l>todennäköisesti<s n="adv"/></l><r>probablement<s n="adv"/></r></p></e>
+     <e><p><l>hitaasti<s n="adv"/></l><r>lentement<s n="adv"/></r></p></e>
+     <e><p><l>nopeasti<s n="adv"/></l><r>rapidement<s n="adv"/></r></p></e>
+     <e><p><l>tietenkään<s n="adv"/></l><r>bien<b/>sur<s n="adv"/></r></p></e>
+     <e><p><l>siellä<s n="adv"/></l><r>là<s n="adv"/></r></p></e>
+     <e><p><l>kaikkialle<s n="adv"/></l><r>partout<s n="adv"/></r></p></e>
+     <e><p><l>yhä<s n="adv"/></l><r>alors<s n="adv"/></r></p></e>
+     <e><p><l>taas<s n="adv"/></l><r>encore<s n="adv"/></r></p></e>
+     <e><p><l>huolellisesti<s n="adv"/></l><r>attentivement<s n="adv"/></r></p></e>
+     <e><p><l>sitten<s n="adv"/></l><r>alors<s n="adv"/></r></p></e>
+     <e><p><l>lähemmäksi<s n="adv"/></l><r>vert<s n="adv"/></r></p></e>
+     <e><p><l>aika<s n="adv"/></l><r>heure<s n="adv"/></r></p></e>
+     <e><p><l>eilen<s n="adv"/></l><r>hier<s n="adv"/></r></p></e>
+     <e><p><l>silloin<s n="adv"/></l><r>alors<s n="adv"/></r></p></e>
+     <e><p><l>ulkona<s n="adv"/></l><r>dehors<s n="adv"/></r></p></e>
+
+     <!-- }}}
+     {{{ verbs -->
+
+     <!-- auxiliaries modals copula -->
+
+     <e><p><l>olla<s n="vaux"/></l><r>être<s n="vbser"/></r></p></e>
+     <e><p><l>olla<s n="vaux"/></l><r>avoir<s n="vbhaver"/></r></p></e>
+     <e><p><l>voida<s n="vaux"/></l><r>pouvoir<s n="vaux"/></r></p></e>
+     <e><p><l>osata<s n="vaux"/></l><r>pouvoir<s n="vaux"/></r></p></e>
+     <e><p><l>täytyä<s n="vaux"/></l><r>devoir<s n="vaux"/></r></p></e>
+
+     <!-- normal verbs -->
+
+     <e><p><l>kylmätä<s n="vblex"/></l><r>froideur<s n="vblex"/></r></p></e>
+     <e><p><l>pitää<s n="vblex"/></l><r>aimer<s n="vblex"/></r></p></e>
+     <e><p><l>pitää<s n="vblex"/></l><r>adorer<s n="vblex"/></r></p></e>
+     <e><p><l>leikkiä<s n="vblex"/></l><r>jouer<s n="vblex"/></r></p></e>
+     <e><p><l>nähdä<s n="vblex"/></l><r>voir<s n="vblex"/></r></p></e>
+     <e><p><l>juosta<s n="vblex"/></l><r>courir<s n="vblex"/></r></p></e>
+     <e><p><l>nukkua<s n="vblex"/></l><r>dormir<s n="vblex"/></r></p></e>
+     <e><p><l>katsoa<s n="vblex"/></l><r>regarder<s n="vblex"/></r></p></e>
+     <e><p><l>nähdä<s n="vblex"/></l><r>voir<s n="vblex"/></r></p></e>
+     <e><p><l>tietää<s n="vblex"/></l><r>savoir<s n="vblex"/></r></p></e>
+     <e><p><l>istua<s n="vblex"/></l><r>asseyer<s n="vblex"/></r></p></e>
+     <e><p><l>laskea<s n="vblex"/></l><r>compter<s n="vblex"/></r></p></e>
+     <e><p><l>tehdä<s n="vblex"/></l><r>faire<s n="vblex"/></r></p></e>
+     <e><p><l>lopettaa<s n="vblex"/></l><r>finir<s n="vblex"/></r></p></e>
+     <e><p><l>saada<s n="vblex"/></l><r>obtenir<s n="vblex"/></r></p></e>
+     <e><p><l>etsiä<s n="vblex"/></l><r>chercher<s n="vblex"/></r></p></e>
+     <e><p><l>puhua<s n="vblex"/></l><r>parler<s n="vblex"/></r></p></e>
+     <e><p><l>ajatella<s n="vblex"/></l><r>penser<s n="vblex"/></r></p></e>
+     <e><p><l>vastata<s n="vblex"/></l><r>répondre<s n="vblex"/></r></p></e>
+     <e><p><l>kertoa<s n="vblex"/></l><r>direr<s n="vblex"/></r></p></e>
+     <e><p><l>sanoa<s n="vblex"/></l><r>parler<s n="vblex"/></r></p></e>
+     <e><p><l>haluta<s n="vblex"/></l><r>vouloir<s n="vblex"/></r></p></e>
+     <e><p><l>kävellä<s n="vblex"/></l><r>marcher<s n="vblex"/></r></p></e>
+     <e><p><l>löytää<s n="vblex"/></l><r>trouver<s n="vblex"/></r></p></e>
+     <e><p><l>nauraa<s n="vblex"/></l><r>rire<s n="vblex"/></r></p></e>
+     <e><p><l>syödä<s n="vblex"/></l><r>manger<s n="vblex"/></r></p></e>
+     <e><p><l>juoda<s n="vblex"/></l><r>boire<s n="vblex"/></r></p></e>
+     <e><p><l>kysyä<s n="vblex"/></l><r>demander<s n="vblex"/></r></p></e>
+     <e><p><l>kuunnella<s n="vblex"/></l><r>écouter<s n="vblex"/></r></p></e>
+     <e><p><l>kuulla<s n="vblex"/></l><r>entendre<s n="vblex"/></r></p></e>
+     <e><p><l>tulla<s n="vblex"/></l><r>venir<s n="vblex"/></r></p></e>
+     <e><p><l>palata<s n="vblex"/></l><r>rentrer<s n="vblex"/></r></p></e>
+     <e><p><l>mennä<s n="vblex"/></l><r>aller<s n="vblex"/></r></p></e>
+     <e><p><l>yrittää<s n="vblex"/></l><r>essayer<s n="vblex"/></r></p></e>
+     <e><p><l>pystyä<s n="vblex"/></l><r>pouvoir<s n="vblex"/></r></p></e>
+
+     <!-- }}}
+     {{{ adpositions -->
+
+     <e><p><l>kanssa<s n="post"/></l><r>avec<s n="pr"/></r></p></e>
+     <e><p><l>edessä<s n="post"/></l><r>devant<s n="pr"/></r></p></e>
+     <e><p><l>sisällä<s n="post"/></l><r>dans<s n="pr"/></r></p></e>
+     <e><p><l>ulos<s n="post"/></l><r>dehors<s n="pr"/></r></p></e>
+     <e><p><l>ympärille<s n="post"/></l><r>autour<s n="pr"/></r></p></e>
+     <e><p><l>läpi<s n="post"/></l><r>travers<s n="pr"/></r></p></e>
+     <e><p><l>alle<s n="post"/></l><r>sous<s n="pr"/></r></p></e>
+
+
+
+     <!-- }}}
+          {{{ conjunctions -->
+
+     <!-- coordinationg -->
+
+     <e><p><l>ja<s n="cnjcoo"/></l><r>et<s n="cnjcoo"/></r></p></e>
+     <e><p><l>tai<s n="cnjcoo"/></l><r>ou<s n="cnjcoo"/></r></p></e>
+     <e><p><l>mutta<s n="cnjcoo"/></l><r>mais<s n="cnjcoo"/></r></p></e>
+     <e><p><l>vaikka<s n="cnjcoo"/></l><r>bien<b/>que<s n="cnjcoo"/></r></p></e>
+
+
+     <!-- subordinating adverbial conjunctions -->
+
+     <e><p><l>että<s n="cnjsub"/></l><r>que<s n="cnjsub"/></r></p></e>
+     <e><p><l>kun<s n="cnjsub"/></l><r>lorsque<s n="cnjsub"/></r></p></e>
+     <e><p><l>mutta<s n="cnjsub"/></l><r>mais<s n="cnjsub"/></r></p></e>
+
+
+     <!--
+       }}}
     {{{ Punctuatkion and stuff
-    {{{ puncts -->
+     puncts -->
 
 
     <e r="LR"><p><l>..<s n="punct"/></l><r>.<s n="sent"/></r></p></e>
@@ -184,7 +397,6 @@
 
     <!--
          }}}
-    }}}
   ito -->
 
 
